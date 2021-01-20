@@ -1,0 +1,25 @@
+{
+    "name": "fnematov/trendyol-parser",
+    "description": "Service for parsing products from trendyol.com",
+    "keywords": [
+        "fnematov",
+        "trendyol-parser"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "authors": [
+        {
+            "name": "Nematov Farhod",
+            "email": "mr.nematov91@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Fnematov\\TrendyolParser\\": "src"
+        }
+    }
+}
