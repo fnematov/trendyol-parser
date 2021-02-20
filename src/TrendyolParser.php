@@ -275,7 +275,7 @@ class TrendyolParser
             'price' => $discountedPrice,
             'old_price' => $sellingPrice,
             'discount' => $discount,
-            'url' => $this->baseUrl . $product->url . $variant->urlQuery,
+            'url' => $this->baseUrl . $product->url . ($variant->urlQuery ?? null),
             'value' => $variant->attributeValue
         ]);
         $this->parsedProduct->variants[] = $productVariant;
