@@ -25,6 +25,13 @@ class ParsedProduct
     public $url;
 
     /**
+     * Product Id
+     *
+     * @var string
+     */
+    public $id;
+
+    /**
      * Name of product
      *
      * @var string

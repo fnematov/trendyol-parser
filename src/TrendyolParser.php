@@ -247,6 +247,7 @@ class TrendyolParser
         $this->parsedProduct->fill([
             'attachments' => $attachments,
             'barcode' => $product->productCode,
+            'id' => $product->id,
             'color' => $product->color,
             'url' => $this->baseUrl . $product->url,
             'name' => $product->name
