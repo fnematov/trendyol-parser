@@ -217,6 +217,7 @@ class TrendyolParser
 
         $this->response->gender = isset($product->gender) ? $product->gender->name : null;
         $this->response->delivery = $product->deliveryInformation->deliveryDate;
+        $this->response->groupId = $product->productGroupId;
         $this->response->rating = [
             'avg' => $product->ratingScore->averageRating,
             'count' => $product->ratingScore->totalRatingCount
