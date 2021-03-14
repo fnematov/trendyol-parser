@@ -40,4 +40,18 @@ class ParserResponse
      * @var null|string
      */
     public $gender = null;
+
+    /**
+     * Group id of product
+     *
+     * @var string
+     */
+    public $groupId;
+
+    /**
+     * Rating score of product
+     *
+     * @var array
+     */
+    public $rating;
 }
