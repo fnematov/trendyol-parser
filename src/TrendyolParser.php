@@ -131,9 +131,12 @@ class TrendyolParser
     private function parseProductByUrl()
     {
         $response = $this->client->get($this->url);
-        $found = preg_match('/window\.__PRODUCT_DETAIL_APP_INITIAL_STATE__ = (.+);/', $response->getBody(), $matches);
+        $found = preg_match('/window\.__PRODUCT_DETAIL_APP_INITIAL_STATE__=(.+);/', $response);
         if ($found) {
-            $this->parsedProductResponse = json_decode($matches[1]);
+            $text = substr($response, strpos($response, '__PRODUCT_DETAIL_APP_INITIAL_STATE__') + 37);
+            $to = strpos($text, 'window.TYPageName') - 1;
+            $json = substr($text, 0, $to);
+            $this->parsedProductResponse = json_decode($json,true);
         }
     }
 
